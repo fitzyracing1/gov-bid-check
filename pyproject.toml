@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gov-bid-check"
+version = "0.1.0"
+description = "Format pre-check for a draft bid or registration file (UEI, CAGE, NAICS, required fields, deadlines). Not official verification. Rules and code, no API, offline."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Joshua Almeida" }]
+requires-python = ">=3.10"
+keywords = ["uei", "cage", "naics", "government", "cli", "offline", "no-ai", "sam-gov"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Homepage = "https://github.com/sponsors/fitzyracing1"
+Repository = "https://github.com/fitzyracing1/gov-bid-check"
+
+[project.scripts]
+gov-bid-check = "gov_bid_check.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+gov_bid_check = ["data/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
