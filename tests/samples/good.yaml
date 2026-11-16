@@ -1,0 +1,8 @@
+# Sample draft registration used only in tests. Values are format-valid, not real registrations.
+entity_name: Sample Robotics LLC
+uei: J6H4FB3N5YK4
+cage: 0YWL3
+naics: 541511
+receipts: 5000000
+deadline: 2026-12-01
+email: bids@example.test
